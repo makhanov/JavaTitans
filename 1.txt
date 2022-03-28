@@ -53,15 +53,15 @@ train_set = datasets.FashionMNIST(
 
 test_set = datasets.FashionMNIST(
     root='./data/FashionMNIST'
-    ,train=False
+    ,train=True
     ,download=True
     ,transform = transform)
 train_sampler = SubsetRandomSampler(list(range(48000)))
 valid_sampler = SubsetRandomSampler(list(range(12000)))
 
 parameters = dict(
-    lr = [0.001], #0.01, 0.001
-    batch_size = [20] #10, 100, 1000
+    lr = [0.002], #0.01, 0.001
+    batch_size = [10] #10, 100, 1000
 )
 
 param_values = [v for v in parameters.values()]
