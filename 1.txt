@@ -92,3 +92,5 @@ for lr, batch_size in product(*param_values):
 
             preds = model(images)
             loss = F.cross_entropy(label, labels)
+
+Comment from the future
